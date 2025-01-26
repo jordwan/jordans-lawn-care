@@ -7,7 +7,7 @@ export default function Home() {
         Jordan's Lawn Care
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        Call Jordan today for all of your lawn care needs
+        Call Jordan @ 250-555-6969 today for all of your lawn care needs
       </footer>
     </div>
   );
