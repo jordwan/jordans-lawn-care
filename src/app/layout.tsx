@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Jordan's Lawn Care",
-  description: "Kelowna's BEST Lawn Care Provider",
+  description:
+    "Kelowna's BEST Lawn Care Provider. Servicing all of the Okanagan.",
 };
 
 export default function RootLayout({
