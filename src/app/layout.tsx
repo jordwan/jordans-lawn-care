@@ -9,8 +9,7 @@ const font = Rethink_Sans({
 
 export const metadata: Metadata = {
   title: "Jordan's Lawn Care",
-  description:
-    "Kelowna's BEST Lawn Care Provider. Servicing all of the Okanagan.",
+  description: "Kelowna's BEST Lawn Care Provider. Servicing the Okanagan.",
 };
 
 export default function RootLayout({
