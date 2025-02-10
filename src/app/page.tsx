@@ -5,7 +5,7 @@ import jlcLogo from "../assets/JLC_landing.png";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center min-h-screen">
       <Image src={jlcLogo} alt="" />
     </div>
   );
