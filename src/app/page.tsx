@@ -5,9 +5,11 @@ import jlcLogo from "../assets/JLC_landing.png";
 
 const HomePage = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <Image src={jlcLogo} alt="" />
-    </div>
+    <a href="mailto:info@jordanslawncare.ca?subject=Website Inquiry JLC Website">
+      <div className="flex justify-center items-center min-h-screen">
+        <Image src={jlcLogo} alt="" />
+      </div>
+    </a>
   );
 };
 
