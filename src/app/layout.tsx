@@ -10,6 +10,9 @@ const font = Rethink_Sans({
 export const metadata: Metadata = {
   title: "Jordan's Lawn Care",
   description: "Kelowna's BEST Lawn Care Provider. Servicing the Okanagan.",
+  icons: {
+    icon: "/favicon.ico", // Favicon for browsers
+    apple: "/apple-touch-icon.png", // Apple Touch Icon,
 };
 
 export default function RootLayout({
