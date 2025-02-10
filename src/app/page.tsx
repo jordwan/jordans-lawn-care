@@ -1,7 +1,14 @@
 import React from "react";
+import Image from "next/image";
+
+import jlcLogo from "../assets/JLC_landing.png";
 
 const HomePage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Image src={jlcLogo} alt="" />
+    </div>
+  );
 };
 
 export default HomePage;
