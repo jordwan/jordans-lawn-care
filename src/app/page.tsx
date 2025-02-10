@@ -5,8 +5,8 @@ import jlcLogo from "../assets/JLC_landing.png";
 
 const HomePage = () => {
   return (
-    <a href="mailto:info@jordanslawncare.ca?subject=Website Inquiry JLC Website">
-      <div className="flex justify-center items-center min-h-screen">
+    <a href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
+      <div className="flex justify-center">
         <Image src={jlcLogo} alt="" />
       </div>
     </a>
