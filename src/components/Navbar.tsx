@@ -17,9 +17,9 @@ const Navbar = () => {
             <Link href="/">
               <span className="text-xl sm:text-2xl font-bold text-gray-900">
                 <Image
-                  className="max-w-[120px] h-auto sm:max-w-[160px]"
+                  className="max-w-[150px] h-auto sm:max-w-[160px]"
                   src={jlcLogo2}
-                  alt=""
+                  alt="Jordan's Lawn Care"
                 />
               </span>
             </Link>
@@ -62,21 +62,21 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                href="/services"
+                href="/"
                 className="text-gray-700 hover:text-green-600"
                 onClick={() => setIsOpen(false)}
               >
                 Services
               </Link>
               <Link
-                href="/about"
+                href="/"
                 className="text-gray-700 hover:text-green-600"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link
-                href="/contact"
+                href="/"
                 className="text-gray-700 hover:text-green-600"
                 onClick={() => setIsOpen(false)}
               >

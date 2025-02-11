@@ -1,18 +1,15 @@
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Navbar from "@/components/Navbar";
-
-import jlcLogo from "../assets/JLC_landing.png";
+import { Hero } from "@/components/Hero";
+import { Hero2 } from "@/components/Hero2";
 
 const HomePage = () => {
   return (
     <div>
       <Navbar />
-      <a href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
-        <div className="flex justify-center">
-          <Image src={jlcLogo} alt="" />
-        </div>
-      </a>
+      <Hero />
+      <Hero2 />
     </div>
   );
 };
