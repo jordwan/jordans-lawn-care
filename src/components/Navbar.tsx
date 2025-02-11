@@ -29,22 +29,13 @@ const Navbar = () => {
               <Link href="/" className="text-gray-700 hover:text-green-600">
                 Home
               </Link>
-              <Link
-                href="/services"
-                className="text-gray-700 hover:text-green-600"
-              >
+              <Link href="/" className="text-gray-700 hover:text-green-600">
                 Services
               </Link>
-              <Link
-                href="/about"
-                className="text-gray-700 hover:text-green-600"
-              >
+              <Link href="/" className="text-gray-700 hover:text-green-600">
                 About
               </Link>
-              <Link
-                href="/contact"
-                className="text-gray-700 hover:text-green-600"
-              >
+              <Link href="/" className="text-gray-700 hover:text-green-600">
                 Contact
               </Link>
             </div>
