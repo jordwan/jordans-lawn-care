@@ -9,7 +9,10 @@ export const Hero2 = () => {
         </h1>
         <p className="mt-3 text-lg md:text-xl font-bold text-gray-700">
           Whether you need a simple lawn trim or a complete yard makeover,
-          <span className="text-teal-500 font-black"> Jordan's Lawn Care </span>
+          <span className="text-teal-500 font-black">
+            {" "}
+            Jordan&apos;s Lawn Care{" "}
+          </span>
           is your go-to choice in Kelowna and the Central Okanagan.
           <br />
           <br />
@@ -26,7 +29,8 @@ export const Hero2 = () => {
         </ul>
 
         <p className="mt-6 text-xl text-center font-black text-gray-900">
-          Call <span className="text-teal-500">Jordan's Lawn Care</span> today!
+          Call <span className="text-teal-500">Jordan&apos;s Lawn Care</span>{" "}
+          today!
         </p>
         <p className="mt-4 text-3xl text-center font-bold text-gray-900">
           <a href="tel:250-808-8888"> 250-808-9988 </a>
