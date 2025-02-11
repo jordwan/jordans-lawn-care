@@ -7,7 +7,7 @@ export const Hero = () => {
   return (
     <div>
       <a href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
-        <div className="pb-5 px-5 py-16 flex justify-center">
+        <div className="pb-5 px-5 py-1 flex justify-center">
           <Image
             src={jlcLogo}
             alt="JLC Logo"
