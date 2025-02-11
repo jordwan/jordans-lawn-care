@@ -9,7 +9,7 @@ export const Hero2 = () => {
         </h1>
         <p className="mt-3 text-lg md:text-xl font-semibold text-gray-700 leading-relaxed">
           Whether you need a simple lawn trim or a complete yard makeover,
-          <span className="text-green-600 font-bold"> Jordan's Lawn Care </span>
+          <span className="text-green-600 font-bold"> Jordans Lawn Care </span>
           is your go-to choice in Kelowna and the Central Okanagan.
           <br />
           <br />
@@ -25,7 +25,7 @@ export const Hero2 = () => {
         </ul>
 
         <p className="mt-6 text-xl font-bold text-gray-900">
-          Call <span className="text-green-600">Jordan’s Lawn Care</span> today!
+          Call <span className="text-green-600">Jordans Lawn Care</span> today!
           📞
         </p>
       </div>
