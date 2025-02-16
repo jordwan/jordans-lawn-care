@@ -20,7 +20,9 @@ export const HeroSection2 = () => {
     "Garden Maintenance",
     "Strata Lawn Maintenance",
   ];
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
+    null
+  );
 
   return (
     <div className="w-full p-4 flex justify-center">
@@ -40,7 +42,7 @@ export const HeroSection2 = () => {
               />
             </div>
             <Link href={links[index]}>
-              <p className="mt-2 pt-4 py-4 px-2 text-xl md:text-2xl font-bold text-center text-black  cursor-pointer">
+              <p className="mt-2 pt-2 py-4 px-2 text-xl md:text-2xl font-bold text-center text-black cursor-pointer">
                 {titles[index]}
               </p>
             </Link>
