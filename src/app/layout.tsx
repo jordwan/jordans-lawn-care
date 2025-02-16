@@ -9,7 +9,7 @@ const font = Rethink_Sans({
 
 export const metadata: Metadata = {
   title: "Jordan's Lawn Care",
-  description: "Kelowna's BEST Lawn Care Provider. Servicing the Okanagan.",
+  description: "Kelowna's BEST Lawn Care Provider. Servicing Central Okanagan.",
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
