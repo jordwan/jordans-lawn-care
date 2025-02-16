@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import jlcLogo from "../assets/hedge.jpg";
 
-export const ContactP1 = () => {
+export const AboutP1 = () => {
   return (
     <a href="/">
       <div className="flex justify-center">
@@ -17,11 +17,11 @@ export const ContactP1 = () => {
   );
 };
 
-export const ContactP2 = () => {
+export const AboutP2 = () => {
   return (
     <div className="max-w-4xl text-center md:text-left pt-10 px-6">
       <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-        Contact Us!
+        About Us.
       </h1>
       <p className="mt-3 text-lg md:text-xl font-bold text-gray-700">
         Whether you need a simple lawn trim or a complete yard makeover,
@@ -59,14 +59,14 @@ export const ContactP2 = () => {
   );
 };
 
-export const Contact = () => {
+export const About = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-16">
       <div className="md:w-1/2 flex justify-center">
-        <ContactP1 />
+        <AboutP1 />
       </div>
       <div className="md:w-1/2">
-        <ContactP2 />
+        <AboutP2 />
       </div>
     </div>
   );
