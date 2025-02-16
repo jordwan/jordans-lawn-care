@@ -5,10 +5,11 @@ export const Hero2 = () => {
     <div className="flex justify-center items-center py-20 px-6">
       <div className="max-w-4xl text-left md:text-left">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-          Your Lawn, Our Passion
+          Kelowna's Friendliest Lawn Care Prodiver
         </h1>
         <p className="mt-3 text-lg md:text-xl font-bold text-gray-700">
-          Whether you need a simple lawn trim or a complete yard makeover,
+          We offer a wide array of lawn care services. Whether you need a simple
+          lawn trim or a complete yard makeover,
           <span className="text-teal-500 font-black">
             {" "}
             Jordan&apos;s Lawn Care{" "}
@@ -17,7 +18,7 @@ export const Hero2 = () => {
           <br />
           <br />
           We provide top-quality, friendly service at competitive rates,
-          offering:
+          servicing Kelowna, West Kelowna, Lake Country, Peachland and more!:
         </p>
 
         <ul className="mt-6 text-lg md:text-xl font-black text-teal-500 list-disc list-inside">
@@ -28,7 +29,7 @@ export const Hero2 = () => {
           <li>And more... Whatever your landscaping heart desires!</li>
         </ul>
 
-        <p className="mt-6 text-xl text-center font-black text-gray-900">
+        <p className="mt-6 text-3xl text-center font-black text-gray-900">
           Call <span className="text-teal-500">Jordan&apos;s Lawn Care</span>{" "}
           today!
         </p>

@@ -42,7 +42,7 @@ export const Hero2 = () => {
         <li>And more... Whatever your landscaping heart desires!</li>
       </ul>
 
-      <p className="mt-6 text-xl font-black text-gray-900">
+      <p className="mt-6 text-3xl font-black text-gray-900">
         Call <span className="text-teal-500">Jordan&apos;s Lawn Care</span>{" "}
         today!
       </p>
