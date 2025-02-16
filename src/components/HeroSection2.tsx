@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
 
@@ -12,7 +12,7 @@ import img3 from "../assets/img5.jpg";
 import img4 from "../assets/img6.jpg";
 
 export const HeroSection2 = () => {
-  const images = [img1, img2, img3, img4];
+  const images: StaticImageData[] = [img1, img2, img3, img4];
   const links = ["/page1", "/page2", "/page3", "/page4"];
   const titles = [
     "Lawn Trimming",
@@ -42,7 +42,7 @@ export const HeroSection2 = () => {
               />
             </div>
             <Link href={links[index]}>
-              <p className="mt-2 pt-4 py-4 px-2 text-xl md:text-2xl font-bold text-center text-black cursor-pointer">
+              <p className="mt-2 pt-2 py-4 px-2 text-xl md:text-2xl font-bold text-center text-black cursor-pointer">
                 {titles[index]}
               </p>
             </Link>
