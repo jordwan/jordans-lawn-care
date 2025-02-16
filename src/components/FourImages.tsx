@@ -26,8 +26,8 @@ const GALLERY_ITEMS: ImageItem[] = [
   { src: img2, title: "Hedge Trimming", link: "/services" },
   { src: img3, title: "Garden Maintenance", link: "/contact" },
   { src: img4, title: "Strata Lawn Maintenance", link: "/" },
-  { src: img5, title: "Garden Maintenance 2", link: "/projects" },
-  { src: img6, title: "Garden Maintenance 3", link: "/team" },
+  { src: img5, title: "Aeration", link: "/services" },
+  { src: img6, title: "Fertalizing", link: "/contact" },
 ];
 
 export const ImageGrid = () => {
@@ -64,13 +64,13 @@ export const ImageGrid = () => {
   }, [selectedItem]);
 
   return (
-    <div className="w-full bg-white py-8">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="w-full bg-white py-2">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {GALLERY_ITEMS.map((item, index) => (
             <button
               key={item.title}
-              className="relative group overflow-hidden h-40 sm:h-64 md:h-48 lg:h-64 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg"
+              className="relative group overflow-hidden h-40 sm:h-64 md:h-48 lg:h-64 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl"
               onClick={() => handleImageClick(item)}
               aria-label={`View ${item.title}`}
             >
@@ -86,7 +86,7 @@ export const ImageGrid = () => {
               <div className="absolute inset-0 bg-black opacity-20 sm:opacity-0 sm:group-hover:opacity-40 transition-opacity duration-300" />
               {/* Always visible title with enhanced text shadow for better readability */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-white text-lg font-bold opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 text-center px-2 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                <p className="text-gray-100 text-2xl md:text-3xl font-bold opacity-100 transition-opacity duration-300 text-center px-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
                   {item.title}
                 </p>
               </div>

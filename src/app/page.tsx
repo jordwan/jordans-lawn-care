@@ -2,12 +2,14 @@ import React from "react";
 
 import { HomeSection } from "@/components/HeroSection";
 import { ImageGrid } from "@/components/FourImages";
+import HeroSection from "@/components/HeroSection2";
 
 const HomePage = () => {
   return (
     <div>
       <HomeSection />
       <ImageGrid />
+      <HeroSection />
     </div>
   );
 };

@@ -69,28 +69,6 @@ const HeroContent = () => {
           ))}
         </ul>
       </div>
-
-      <div className="pt-4 space-y-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-          Contact {CONTACT_INFO.companyName} today!
-        </h2>
-        <div className="space-y-3">
-          <Link
-            href={`tel:${CONTACT_INFO.phone}`}
-            className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-teal-500 hover:text-teal-600 transition-colors"
-          >
-            <Phone className="w-6 h-6" />
-            <span>{CONTACT_INFO.phone}</span>
-          </Link>
-          <Link
-            href={`mailto:${CONTACT_INFO.email}?subject=Lawn Care Inquiry`}
-            className="flex items-center space-x-2 text-lg md:text-xl font-bold text-teal-500 hover:text-teal-600 transition-colors"
-          >
-            <Mail className="w-6 h-6" />
-            <span>{CONTACT_INFO.email}</span>
-          </Link>
-        </div>
-      </div>
     </div>
   );
 };
