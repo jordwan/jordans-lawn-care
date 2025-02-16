@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import jlcLogo from "../assets/lawncare-image2.jpg";
+import jlcLogo from "../assets/big-house-lawn.png";
 
 export const ContactP1 = () => {
   return (
@@ -11,7 +11,7 @@ export const ContactP1 = () => {
         <Image
           src={jlcLogo}
           alt="JLC Logo"
-          className="w-[80%] max-w-[450px] md:max-w-[200px] lg:max-w-[900px] h-auto"
+          className="w-[95%] max-w-[550px] md:max-w-[200px] lg:max-w-[900px] h-auto"
         />
       </div>
     </Link>
@@ -44,14 +44,14 @@ export const ContactP2 = () => {
         <li>And more... Whatever your landscaping heart desires!</li>
       </ul>
 
-      <p className="mt-6 text-3xl font-black text-gray-900">
-        Call <span className="text-teal-500">Jordan&apos;s Lawn Care</span>{" "}
-        today!
-      </p>
       <p className="mt-4 text-3xl font-bold text-gray-900">
-        <Link href="tel:250-808-8888"> 250-808-9988 </Link>
+        Call us today at <Link href="tel:250-808-8888"> 250-808-9988 </Link>
       </p>
       <p className="mt-4 text-xl font-bold text-gray-900">
+        Or send us an e-mail with a description of your vision and we will be in
+        touch!
+      </p>
+      <p className="mt-4 text-2xl font-bold text-gray-900">
         <Link href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
           info@jordanslawncare.ca
         </Link>

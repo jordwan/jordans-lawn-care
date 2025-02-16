@@ -11,7 +11,7 @@ export const AboutP1 = () => {
         <Image
           src={jlcLogo}
           alt="JLC Logo"
-          className="w-[80%] max-w-[450px] md:max-w-[200px] lg:max-w-[900px] h-auto"
+          className="w-[95%] max-w-[550px] md:max-w-[200px] lg:max-w-[900px] h-auto"
         />
       </div>
     </Link>

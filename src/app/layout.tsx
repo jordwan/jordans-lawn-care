@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Rethink_Sans } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/FooterComponent";
 import "./globals.css";
 
-const font = Rethink_Sans({
-  weight: ["400", "500", "600", "700", "800"],
+const font = Noto_Sans({
+  weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
 });
 

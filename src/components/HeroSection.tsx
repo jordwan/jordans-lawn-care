@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import jlcLogo from "../assets/hedge.jpg";
+import jlcLogo from "../assets/heroimage.jpg";
 import Link from "next/link";
 
 export const Hero = () => {
@@ -10,7 +10,7 @@ export const Hero = () => {
         <Image
           src={jlcLogo}
           alt="JLC Logo"
-          className="w-[80%] max-w-[450px] md:max-w-[700px] lg:max-w-[900px] h-auto"
+          className="w-[95%] max-w-[550px] md:max-w-[700px] lg:max-w-[900px] h-auto"
         />
       </div>
     </Link>
