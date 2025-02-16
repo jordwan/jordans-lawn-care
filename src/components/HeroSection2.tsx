@@ -61,7 +61,7 @@ export const HeroSection2 = () => {
             </div>
             {/* Caption link (under the thumbnail) */}
             <Link href={links[index]}>
-              <p className="mt-2 pt-1 md:pt-6 py-4 px-2 text-xl md:text-3xl font-bold text-center text-black cursor-pointer">
+              <p className="mt-2 pt-1 md:pt-6 py-4 px-2 text-xl md:text-3xl font-black text-center text-black cursor-pointer">
                 {titles[index]}
               </p>
             </Link>
@@ -95,7 +95,7 @@ export const HeroSection2 = () => {
             <div className="absolute inset-0 flex items-center shadow-2xl justify-center">
               <Link
                 href={selectedItem.link}
-                className="text-white text-center text-6xl font-bold shadow-xl"
+                className="text-outline-black p-2 text-center text-7xl font-black"
               >
                 {selectedItem.title}
               </Link>

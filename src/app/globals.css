@@ -19,3 +19,15 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .text-outline-black {
+    -webkit-text-stroke: 0.5px #383838; /* Stroke width and color */
+    color: white;
+    /* So the fill becomes 'see-through' */
+    /* Optionally:
+       fill-color: transparent;
+       stroke-color: #000;
+    */
+  }
+}
