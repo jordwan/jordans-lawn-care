@@ -42,7 +42,7 @@ export const HeroSection2 = () => {
               />
             </div>
             <Link href={links[index]}>
-              <p className="mt-2 pt-2 py-4 px-2 text-xl md:text-2xl font-bold text-center text-black cursor-pointer">
+              <p className="mt-2 pt-4 py-4 px-2 text-xl md:text-2xl font-bold text-center text-black cursor-pointer">
                 {titles[index]}
               </p>
             </Link>
