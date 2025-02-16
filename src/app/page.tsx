@@ -1,15 +1,12 @@
 import React from "react";
-// import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { Hero2 } from "@/components/Hero2";
+import { HeroSection } from "@/components/HeroSection";
 
 const HomePage = () => {
   return (
     <div>
       <Navbar />
-      <Hero2 />
-      <Hero />
+      <HeroSection />
     </div>
   );
 };
