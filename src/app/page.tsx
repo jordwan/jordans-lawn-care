@@ -1,13 +1,13 @@
 import React from "react";
 
-import { HeroSection } from "@/components/HeroSection";
-import { HeroSection2 } from "@/components/HeroSection2";
+import { HomeSection } from "@/components/HeroSection";
+import { HomeSection2 } from "@/components/HeroSection2";
 
 const HomePage = () => {
   return (
     <div>
-      <HeroSection />
-      <HeroSection2 />
+      <HomeSection />
+      <HomeSection2 />
     </div>
   );
 };

@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Services } from "@/components/ServicesComponent";
-import { HeroSection2 } from "@/components/HeroSection2";
+import { HomeSection2 } from "@/components/HeroSection2";
 
 const HomePage = () => {
   return (
     <div>
       <Services />
-      <HeroSection2 />
+      <HomeSection2 />
     </div>
   );
 };

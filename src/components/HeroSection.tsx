@@ -11,7 +11,7 @@ export const Home = () => {
         <Image
           src={homeImage}
           alt="Jordans Lawn Care Home Image"
-          className="w-full h-auto px-8 py-8"
+          className="w-full h-auto p-8"
         />
       </div>
     </Link>
@@ -60,7 +60,7 @@ export const Home2 = () => {
   );
 };
 
-export const HeroSection = () => {
+export const HomeSection = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-1 px-2 pt-16 md:pt-[125px] pb-24">
       <div className="md:w-1/2">

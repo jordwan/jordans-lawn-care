@@ -11,7 +11,7 @@ import img2 from "../assets/img7.jpg";
 import img3 from "../assets/img5.jpg";
 import img4 from "../assets/img6.jpg";
 
-export const HeroSection2 = () => {
+export const HomeSection2 = () => {
   const images: StaticImageData[] = [img1, img2, img3, img4];
   const links = ["/about", "/services", "/contact", "/"];
   const titles = [
@@ -119,4 +119,4 @@ export const HeroSection2 = () => {
   );
 };
 
-export default HeroSection2;
+export default HomeSection2;
