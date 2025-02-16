@@ -101,7 +101,7 @@ export const HeroSection2 = () => {
               </Link>
             </div>
 
-            {/* Close button (top-right corner) */}
+            {/* Close button (top -right corner) */}
             <button
               className="absolute top-4 right-4 text-white p-2 rounded-full"
               onClick={handleClose}
