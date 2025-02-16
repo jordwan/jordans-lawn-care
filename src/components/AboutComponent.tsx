@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import jlcLogo from "../assets/hedge.jpg";
 
 export const AboutP1 = () => {
   return (
-    <a href="/">
+    <Link href="/">
       <div className="flex justify-center">
         <Image
           src={jlcLogo}
@@ -13,7 +14,7 @@ export const AboutP1 = () => {
           className="w-[80%] max-w-[450px] md:max-w-[200px] lg:max-w-[900px] h-auto"
         />
       </div>
-    </a>
+    </Link>
   );
 };
 
@@ -48,12 +49,12 @@ export const AboutP2 = () => {
         today!
       </p>
       <p className="mt-4 text-3xl font-bold text-gray-900">
-        <a href="tel:250-808-8888"> 250-808-9988 </a>
+        <Link href="tel:250-808-8888"> 250-808-9988 </Link>
       </p>
       <p className="mt-4 text-xl font-bold text-gray-900">
-        <a href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
+        <Link href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
           info@jordanslawncare.ca
-        </a>
+        </Link>
       </p>
     </div>
   );

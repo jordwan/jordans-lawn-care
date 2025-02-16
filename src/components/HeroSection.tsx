@@ -4,7 +4,7 @@ import jlcLogo from "../assets/hedge.jpg";
 
 export const Hero = () => {
   return (
-    <a href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
+    <a href="/">
       <div className="flex justify-center">
         <Image
           src={jlcLogo}

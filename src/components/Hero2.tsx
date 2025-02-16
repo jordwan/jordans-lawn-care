@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export const Hero2 = () => {
   return (
@@ -34,12 +35,12 @@ export const Hero2 = () => {
           today!
         </p>
         <p className="mt-4 text-3xl text-center font-bold text-gray-900">
-          <a href="tel:250-808-8888"> 250-808-9988 </a>
+          <Link href="tel:250-808-8888"> 250-808-9988 </Link>
         </p>
         <p className="mt-4 text-xl text-center font-bold text-gray-900">
-          <a href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
+          <Link href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
             info@jordanslawncare.ca
-          </a>
+          </Link>
         </p>
       </div>
     </div>
