@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           </Link>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center mt-4 space-x-4">
+          <div className="flex flex-wrap justify-center mt-4 p-4 space-x-8">
             <Link href="/" className="text-gray-700 hover:text-green-600">
               Home
             </Link>

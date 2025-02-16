@@ -62,7 +62,7 @@ export const ServicesP2 = () => {
 
 export const Services = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-16">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-24">
       <div className="md:w-1/2 flex justify-center">
         <ServicesP1 />
       </div>

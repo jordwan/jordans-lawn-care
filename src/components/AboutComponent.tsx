@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import jlcLogo from "../assets/hedge.jpg";
+import jlcLogo from "../assets/img5.jpg";
 
 export const AboutP1 = () => {
   return (
@@ -62,7 +62,7 @@ export const AboutP2 = () => {
 
 export const About = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-16">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-24">
       <div className="md:w-1/2 flex justify-center">
         <AboutP1 />
       </div>

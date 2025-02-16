@@ -10,7 +10,7 @@ export const Hero = () => {
         <Image
           src={jlcLogo}
           alt="JLC Logo"
-          className="w-[80%] max-w-[450px] md:max-w-[200px] lg:max-w-[900px] h-auto"
+          className="w-[80%] max-w-[450px] md:max-w-[700px] lg:max-w-[900px] h-auto"
         />
       </div>
     </Link>
@@ -61,7 +61,7 @@ export const Hero2 = () => {
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-16">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 pt-24 pb-16">
       <div className="md:w-1/2 flex justify-center">
         <Hero />
       </div>
