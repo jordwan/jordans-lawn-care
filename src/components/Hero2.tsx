@@ -2,7 +2,7 @@ import React from "react";
 
 export const Hero2 = () => {
   return (
-    <div className="flex justify-center items-center py-20 px-6">
+    <div className="flex justify-center items-center py-28 px-6">
       <div className="max-w-4xl text-left md:text-left">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
           Kelowna's Friendliest Lawn Care Prodiver

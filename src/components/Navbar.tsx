@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -8,11 +8,11 @@ import jlcLogo2 from "../assets/jcl-logo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <Link href="/">
             <span className="text-xl sm:text-2xl font-bold text-gray-900">
               <Image
@@ -23,7 +23,7 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop */}
           <div className="hidden md:flex space-x-6">
             <Link href="/" className="text-gray-700 hover:text-green-600">
               Home
@@ -45,7 +45,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
             className="md:hidden text-gray-900"
             onClick={() => setIsOpen(!isOpen)}
@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg absolute w-full left-0 top-full">
           <div className="flex flex-col space-y-4 py-4 px-6">
