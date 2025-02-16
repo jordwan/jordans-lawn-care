@@ -47,7 +47,9 @@ const Footer: React.FC = () => {
 
           {/* Copyright */}
           <Link href="http://jordwan.com">
-            <div className="mt-4 text-center text-white-600">webd. jordwan</div>
+            <div className="mt-4 text-center text-white-600">
+              &copy; {currentYear} webd. jordwan
+            </div>
           </Link>
         </div>
       </div>
