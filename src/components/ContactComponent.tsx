@@ -8,11 +8,7 @@ export const ContactP1 = () => {
   return (
     <Link href="/">
       <div className="flex justify-center">
-        <Image
-          src={jlcLogo}
-          alt="JLC Logo"
-          className="w-[95%] max-w-[550px] md:max-w-[200px] lg:max-w-[900px] h-auto"
-        />
+        <Image src={jlcLogo} alt="JLC Logo" className="w-full h-auto md:p-8" />
       </div>
     </Link>
   );
@@ -62,8 +58,8 @@ export const ContactP2 = () => {
 
 export const Contact = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-24">
-      <div className="md:w-1/2 flex justify-center">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 pt-24">
+      <div className="md:w-1/2">
         <ContactP1 />
       </div>
       <div className="md:w-1/2">

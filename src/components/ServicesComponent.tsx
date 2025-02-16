@@ -8,11 +8,7 @@ export const ServicesP1 = () => {
   return (
     <Link href="/">
       <div className="flex justify-center">
-        <Image
-          src={jlcLogo}
-          alt="JLC Logo"
-          className="w-[95%] max-w-[550px] md:max-w-[450px] lg:max-w-[900px] h-auto"
-        />
+        <Image src={jlcLogo} alt="JLC Logo" className="w-full h-auto p-10" />
       </div>
     </Link>
   );
@@ -20,7 +16,7 @@ export const ServicesP1 = () => {
 
 export const ServicesP2 = () => {
   return (
-    <div className="max-w-4xl text-center md:text-left pt-10 px-6">
+    <div className="max-w-4xl text-center md:text-left pt-2 px-6">
       <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
         Services We Offer.
       </h1>
@@ -65,7 +61,7 @@ export const ServicesP2 = () => {
 export const Services = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 py-24">
-      <div className="md:w-1/2 flex justify-center">
+      <div className="md:w-1/2">
         <ServicesP1 />
       </div>
       <div className="md:w-1/2">

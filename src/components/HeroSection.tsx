@@ -1,25 +1,26 @@
 import React from "react";
 import Image from "next/image";
-import jlcLogo from "../assets/heroimage.jpg";
 import Link from "next/link";
 
-export const Hero = () => {
+import homeImage from "../assets/heroimage.jpg";
+
+export const Home = () => {
   return (
     <Link href="/">
       <div className="flex justify-center">
         <Image
-          src={jlcLogo}
-          alt="JLC Logo"
-          className="w-[95%] max-w-[550px] md:max-w-[700px] lg:max-w-[900px] h-auto"
+          src={homeImage}
+          alt="Jordans Lawn Care Home Image"
+          className="w-full h-auto px-8 py-8"
         />
       </div>
     </Link>
   );
 };
 
-export const Hero2 = () => {
+export const Home2 = () => {
   return (
-    <div className="max-w-4xl text-center md:text-left pt-10 px-6">
+    <div className="max-w-4xl text-center md:text-left pt-2 px-6">
       <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
         Your Lawn, Our Passion
       </h1>
@@ -61,12 +62,12 @@ export const Hero2 = () => {
 
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 px-6 pt-24 pb-16">
-      <div className="md:w-1/2 flex justify-center">
-        <Hero />
+    <div className="flex flex-col md:flex-row items-center justify-center gap-1 px-2 pt-16 md:pt-[125px] pb-24">
+      <div className="md:w-1/2">
+        <Home />
       </div>
       <div className="md:w-1/2">
-        <Hero2 />
+        <Home2 />
       </div>
     </div>
   );
