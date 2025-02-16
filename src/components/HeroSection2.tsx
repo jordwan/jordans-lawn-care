@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
-import homeImage from "../assets/heroimage.jpg";
 import heroImage from "../assets/big-house-lawn.png";
 
 // Separate contact information for easy maintenance

@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Phone, Mail } from "lucide-react";
 import homeImage from "../assets/heroimage.jpg";
 
 // Separate contact information for easy maintenance
