@@ -24,34 +24,31 @@ export const AboutP2 = () => {
       <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
         About Us.
       </h1>
-      <p className="mt-3 text-lg md:text-xl font-bold text-gray-700">
-        Whether you need a simple lawn trim or a complete yard makeover,
+      <p className="mt-3 text-xl md:text-xl font-bold text-gray-700">
+        At{" "}
         <span className="text-teal-500 font-black">
           {" "}
-          Jordan&apos;s Lawn Care{" "}
+          Jordan&apos;s Lawn Care
         </span>
-        is your go-to choice in Kelowna and the Central Okanagan.
+        , we believe a beautiful yard should be easy and worry-free for everyone
+        in Kelowna and the Central Okanagan. Whether you need a quick trim or a
+        complete yard makeover, our friendly, experienced team is ready to help
+        with: is your go-to choice in Kelowna and the Central Okanagan.
         <br />
         <br />
-        We provide top-quality, friendly service at competitive rates, offering:
+        Let us handle the hard work, so you can sit back, relax, and enjoy a
+        vibrant outdoor space all season long. Get in touch with us today and
+        experience the difference our dependable service can make.
       </p>
 
-      <ul className="mt-6 text-lg md:text-xl font-black text-teal-500 list-disc list-inside">
-        <li>Lawn Mowing & Hedge Maintenance</li>
-        <li>Garden Bed Cleanup & Edging</li>
-        <li>Power Raking & Aeration</li>
-        <li>Residential and Strata Services</li>
-        <li>And more... Whatever your landscaping heart desires!</li>
-      </ul>
-
-      <p className="mt-6 text-3xl font-black text-gray-900">
-        Call <span className="text-teal-500">Jordan&apos;s Lawn Care</span>{" "}
-        today!
-      </p>
       <p className="mt-4 text-3xl font-bold text-gray-900">
-        <Link href="tel:250-808-8888"> 250-808-9988 </Link>
+        Call us today at <Link href="tel:250-808-8888"> 250-808-9988 </Link>
       </p>
       <p className="mt-4 text-xl font-bold text-gray-900">
+        Or send us an e-mail with a description of your vision and we will be in
+        touch!
+      </p>
+      <p className="mt-4 text-2xl font-bold text-gray-900">
         <Link href="mailto:info@jordanslawncare.ca?subject=Lawn Care Inquiry">
           info@jordanslawncare.ca
         </Link>

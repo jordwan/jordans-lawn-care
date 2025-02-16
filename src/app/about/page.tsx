@@ -1,11 +1,13 @@
 import React from "react";
 
 import { About } from "@/components/AboutComponent";
+import { HeroSection2 } from "@/components/HeroSection2";
 
 const HomePage = () => {
   return (
     <div>
       <About />
+      <HeroSection2 />
     </div>
   );
 };
