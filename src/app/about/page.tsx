@@ -1,13 +1,13 @@
 import React from "react";
 
 import { About } from "@/components/AboutComponent";
-import { HomeSection2 } from "@/components/HeroSection2";
+import { ImageGrid } from "@/components/FourImages";
 
 const HomePage = () => {
   return (
     <div>
       <About />
-      <HomeSection2 />
+      <ImageGrid />
     </div>
   );
 };

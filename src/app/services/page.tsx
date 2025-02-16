@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Services } from "@/components/ServicesComponent";
-import { HomeSection2 } from "@/components/HeroSection2";
+import { ImageGrid } from "@/components/FourImages";
 
 const HomePage = () => {
   return (
     <div>
       <Services />
-      <HomeSection2 />
+      <ImageGrid />
     </div>
   );
 };
