@@ -6,7 +6,7 @@ export const Hero2 = () => {
     <div className="flex justify-center items-center py-28 px-6">
       <div className="max-w-4xl text-left md:text-left">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-          Kelowna's Friendliest Lawn Care Prodiver
+          Kelownas Friendliest Lawn Care Prodiver
         </h1>
         <p className="mt-3 text-lg md:text-xl font-bold text-gray-700">
           We offer a wide array of lawn care services. Whether you need a simple
