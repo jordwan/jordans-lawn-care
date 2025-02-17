@@ -10,7 +10,7 @@ import img2 from "../assets/img7.jpg";
 import img3 from "../assets/img5.jpg";
 import img4 from "../assets/img6.jpg";
 import img5 from "../assets/img1.jpg";
-import img6 from "../assets/img6.jpg";
+import img6 from "../assets/hedge.jpg";
 
 // Define proper types for our data structure
 interface ImageItem {

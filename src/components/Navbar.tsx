@@ -1,95 +1,102 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import jlcLogo2 from "../assets/jcl-logo.jpg";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white fixed top-0 left-0 right-0 shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/">
-            <span className="text-xl sm:text-2xl font-bold text-gray-900">
-              <Image
-                className="max-w-[150px] h-auto sm:max-w-[160px]"
-                src={jlcLogo2}
-                alt="Jordan's Lawn Care"
-              />
-            </span>
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image
+              src={jlcLogo2}
+              alt="Jordan's Lawn Care Logo"
+              className="w-32 sm:w-40"
+              priority
+            />
           </Link>
 
-          {/* Desktop */}
-          <div className="hidden md:flex space-x-6">
-            <Link href="/" className="text-gray-700 hover:text-green-600">
-              Home
-            </Link>
-            <Link
-              href="/services"
-              className="text-gray-700 hover:text-green-600"
-            >
-              Services
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-green-600">
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="text-gray-700 hover:text-green-600"
-            >
-              Contact
-            </Link>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 hover:text-green-600 transition-colors duration-200"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
-          {/* Mobile Button */}
+          {/* Mobile Navigation Button in the nav bar */}
           <button
-            className="md:hidden text-gray-900"
-            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation menu"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="md:hidden text-gray-700 hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 rounded"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute w-full left-0 top-full">
-          <div className="flex flex-col space-y-4 py-4 px-6">
-            <Link
-              href="/"
-              className="text-gray-700 hover:text-green-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/services"
-              className="text-gray-700 hover:text-green-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/about"
-              className="text-gray-700 hover:text-green-600"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="text-gray-700 hover:text-green-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
+      {/* Mobile Navigation Overlay & Sliding Menu */}
+      <div
+        className={`fixed inset-0 z-40 md:hidden transition duration-300 ${
+          isOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+      >
+        {/* Semi-transparent Overlay */}
+        <div
+          className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+            isOpen ? "opacity-50" : "opacity-0"
+          }`}
+          onClick={() => setIsOpen(false)}
+        ></div>
+
+        {/* Sliding Menu Panel */}
+        <div
+          className={`absolute top-0 right-0 w-2/3 max-w-xs bg-white h-full shadow-lg p-6 transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Extra X Button inside the sliding panel */}
+          <button
+            aria-label="Close menu"
+            onClick={() => setIsOpen(false)}
+            className="absolute top-4 right-4 text-gray-700 hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 rounded"
+          >
+            <X size={28} />
+          </button>
+
+          <div className="flex flex-col items-end space-y-6 mt-12">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="block text-gray-700 text-2xl hover:text-cyan-600 transition-colors duration-200"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
