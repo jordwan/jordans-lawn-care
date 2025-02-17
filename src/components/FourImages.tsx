@@ -22,11 +22,11 @@ interface ImageItem {
 
 // Separate data from component
 const GALLERY_ITEMS: ImageItem[] = [
-  { src: img1, title: "Lawn Trimming", link: "/about" },
-  { src: img2, title: "Hedge Trimming", link: "/services" },
+  { src: img1, title: "Lawn Trimming", link: "/contact" },
+  { src: img2, title: "Hedge Trimming", link: "/contact" },
   { src: img3, title: "Garden Maintenance", link: "/contact" },
-  { src: img4, title: "Strata Lawn Maintenance", link: "/" },
-  { src: img5, title: "Aeration", link: "/services" },
+  { src: img4, title: "Strata Lawn Maintenance", link: "/contact" },
+  { src: img5, title: "Aeration", link: "/contact" },
   { src: img6, title: "Fertalizing", link: "/contact" },
 ];
 
@@ -121,7 +121,7 @@ export const ImageGrid = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <Link
                 href={selectedItem.link}
-                className="text-white text-4xl font-bold hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded-lg px-4 py-2"
+                className="text-white text-5xl font-bold hover:text-cyan-500 focus:outline-none focus:ring-2 focus:ring-white rounded-lg px-4 py-2"
                 id="modal-title"
               >
                 {selectedItem.title}
