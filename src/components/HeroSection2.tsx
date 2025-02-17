@@ -14,7 +14,7 @@ const CONTACT_INFO = {
 
 const HeroImage = () => {
   return (
-    <div className="relative w-full h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+    <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
       <Image
         src={heroImage}
         alt="Professional lawn care services in Kelowna"

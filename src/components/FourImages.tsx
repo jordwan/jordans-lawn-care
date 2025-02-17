@@ -64,13 +64,13 @@ export const ImageGrid = () => {
   }, [selectedItem]);
 
   return (
-    <div className="w-full bg-white py-2">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div className="w-full bg-white pt-4 md:pt-20">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
           {GALLERY_ITEMS.map((item, index) => (
             <button
               key={item.title}
-              className="relative group overflow-hidden h-40 sm:h-64 md:h-48 lg:h-64 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl"
+              className="relative group overflow-hidden h-64 sm:h-64 md:h-48 lg:h-64 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl shadow-xl"
               onClick={() => handleImageClick(item)}
               aria-label={`View ${item.title}`}
             >
@@ -79,14 +79,14 @@ export const ImageGrid = () => {
                 alt={item.alt || item.title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-300 group-hover:scale-105 "
                 priority={index < 4}
               />
               {/* Lighter overlay on mobile, darker on desktop hover */}
               <div className="absolute inset-0 bg-black opacity-20 sm:opacity-0 sm:group-hover:opacity-40 transition-opacity duration-300" />
               {/* Always visible title with enhanced text shadow for better readability */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-gray-100 text-2xl md:text-3xl font-bold opacity-100 transition-opacity duration-300 text-center px-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                <p className="text-gray-100 text-3xl md:text-3xl font-bold opacity-100 transition-opacity duration-300 text-center px-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
                   {item.title}
                 </p>
               </div>

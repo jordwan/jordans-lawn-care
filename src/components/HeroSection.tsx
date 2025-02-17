@@ -21,7 +21,7 @@ const SERVICES = [
 
 const HeroImage = () => {
   return (
-    <div className="relative w-full h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+    <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
       <Image
         src={homeImage}
         alt="Professional lawn care services in Kelowna"
@@ -36,13 +36,14 @@ const HeroImage = () => {
 
 const HeroContent = () => {
   return (
-    <div className="space-y-6 md:space-y-8 max-w-xl">
+    <div className="space-y-4 md:space-y-6 max-w-xl">
       <div>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-          Your Lawn, <span className="text-teal-500">Our Passion</span>
+        <h1 className="text-5xl md:text-5xl font-black text-gray-900 leading-tight">
+          Your Lawn,<br></br> <span className="text-teal-500">Our Passion</span>
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed">
-          Whether you need a simple lawn trim or a complete yard makeover,{" "}
+          Whether you need a basic lawn trimming, detailed edging, or a complete
+          yard makeover,{" "}
           <span className="text-teal-500 font-bold">
             {CONTACT_INFO.companyName}
           </span>{" "}
