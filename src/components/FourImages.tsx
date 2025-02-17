@@ -64,7 +64,7 @@ export const ImageGrid = () => {
   }, [selectedItem]);
 
   return (
-    <div className="w-full bg-white pt-4 md:pt-20">
+    <div className="w-full bg-white pt-4 md:pt-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
           {GALLERY_ITEMS.map((item, index) => (

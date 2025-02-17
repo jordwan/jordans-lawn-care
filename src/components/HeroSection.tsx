@@ -36,7 +36,7 @@ const HeroImage = () => {
 
 const HeroContent = () => {
   return (
-    <div className="space-y-4 md:space-y-6 max-w-xl">
+    <div className="px-2 space-y-4 md:space-y-6 max-w-xl">
       <div>
         <h1 className="text-5xl md:text-5xl font-black text-gray-900 leading-tight">
           Your Lawn,<br></br> <span className="text-teal-500">Our Passion</span>
@@ -56,14 +56,16 @@ const HeroContent = () => {
           We provide top-quality, friendly service at competitive rates,
           offering:
         </h2>
-        <ul className="space-y-3">
+        <ul className="space-y-2">
           {SERVICES.map((service, index) => (
             <li
               key={index}
               className="flex items-start space-x-2 text-lg text-gray-700"
             >
               <span className="text-teal-500 font-bold mt-1">•</span>
-              <span>{service}</span>
+              <span className="text-xl text-gray-600 font-bold mt-1">
+                {service}
+              </span>
             </li>
           ))}
         </ul>
