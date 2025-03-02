@@ -7,7 +7,7 @@ import heroImage from "../assets/big-house-lawn.png";
 
 // Separate contact information for easy maintenance
 const CONTACT_INFO = {
-  phone: "250-808-9988",
+  phone: "672-969-LAWN",
   email: "info@jordanslawncare.ca",
   companyName: "Jordan's Lawn Care",
 };

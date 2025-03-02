@@ -7,7 +7,7 @@ import homeImage from "../assets/mowing-service.jpg";
 
 // Separate contact information for easy maintenance
 const CONTACT_INFO = {
-  phone: "250-808-9988",
+  phone: "672-969-LAWN",
   email: "info@jordanslawncare.ca",
   companyName: "Jordan's Lawn Care",
 };

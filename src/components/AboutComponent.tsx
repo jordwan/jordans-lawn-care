@@ -40,7 +40,7 @@ export const AboutP2 = () => {
         service can make.
       </p>
       <p className="mt-4 text-3xl font-bold text-gray-900">
-        Call us today at <Link href="tel:250-808-8888"> 250-808-9988 </Link>
+        Call us today at <Link href="tel:672-969-5296"> 672-969-LAWN </Link>
       </p>
       <p className="mt-4 text-xl font-bold text-gray-900">
         Or send us an e-mail with a description of your vision and we will be in
