@@ -1,15 +1,15 @@
 import React from "react";
 
-import { HomeSection } from "@/components/HomeSection";
+import HeroSection from "@/components/HeroSection";
 import { ImageGrid } from "@/components/FourImages";
-import HeroSection from "@/components/HeroSection2";
+import { HomeSection } from "@/components/HomeSection";
 
 const HomePage = () => {
   return (
     <div>
-      <HomeSection />
-      <ImageGrid />
       <HeroSection />
+      <ImageGrid />
+      <HomeSection />
     </div>
   );
 };

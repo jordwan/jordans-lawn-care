@@ -1,23 +1,16 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import homeImage from "../assets/heroimage.jpg";
+import Link from "next/link";
+import { Phone, Mail } from "lucide-react";
+import homeImage from "../assets/big-house-lawn.png";
 
 // Separate contact information for easy maintenance
 const CONTACT_INFO = {
-  phone: "672-969-5296",
+  phone: "672-969-LAWN",
   email: "info@jordanslawncare.ca",
   companyName: "Jordan's Lawn Care",
 };
-
-// Separate services list for maintainability
-const SERVICES = [
-  "Lawn Mowing & Hedge Maintenance",
-  "Garden Bed Cleanup & Edging",
-  "Power Raking & Aeration",
-  "Residential and Strata Services",
-  "And more... Whatever your landscaping heart desires!",
-];
 
 const HomeImage = () => {
   return (
@@ -36,40 +29,43 @@ const HomeImage = () => {
 
 const HomeContent = () => {
   return (
-    <div className="px-2 space-y-4 md:space-y-6 max-w-xl">
+    <div className="space-y-6 md:space-y-8 max-w-xl m-2">
       <div>
-        <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-          Your Lawn, <br />
-          <span className="text-teal-500">Our Passion</span>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          Kelowna&apos;s Best, <br></br>{" "}
+          <span className="text-teal-500">Lawn Care</span>
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed">
-          Whether you need a basic lawn trimming, detailed edging, or a complete
-          yard makeover,{" "}
-          <span className="text-teal-500 font-bold">
-            {CONTACT_INFO.companyName}
-          </span>{" "}
-          is your go-to choice in Kelowna and the Central Okanagan.
+          Our flexible approach is designed to meet the unique needs of both
+          homeowners and strata clients, ensuring every property remains
+          vibrant, healthy, and appealing.
+        </p>
+        <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed">
+          Servicing Kelowna, West Kelowna, Lake Country, McKinley Beach and
+          Peachland.
         </p>
       </div>
 
-      <div className="space-y-4">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900">
-          We provide top-quality, friendly service at competitive rates,
-          offering:
+      <div className="pt-4 space-y-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          Contact {CONTACT_INFO.companyName} today!
         </h2>
-        <ul className="space-y-2">
-          {SERVICES.map((service, index) => (
-            <li
-              key={index}
-              className="flex items-start space-x-2 text-lg text-gray-700"
-            >
-              <span className="text-teal-500 font-bold mt-1">•</span>
-              <span className="text-xl text-gray-600 font-bold mt-1">
-                {service}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div className="space-y-3">
+          <Link
+            href={`tel:${CONTACT_INFO.phone}`}
+            className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-teal-500 hover:text-teal-600 transition-colors"
+          >
+            <Phone className="w-6 h-6" />
+            <span>{CONTACT_INFO.phone}</span>
+          </Link>
+          <Link
+            href={`mailto:${CONTACT_INFO.email}?subject=Lawn Care Inquiry`}
+            className="flex items-center space-x-2 text-lg md:text-xl font-bold text-teal-500 hover:text-teal-600 transition-colors"
+          >
+            <Mail className="w-6 h-6" />
+            <span>{CONTACT_INFO.email}</span>
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -79,11 +75,11 @@ export const HomeSection = () => {
   return (
     <section className="container mx-auto px-6">
       {/* Added pt-24 to account for fixed navbar, and increased padding on larger screens */}
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-24 md:pt-32 pb-12 md:pb-20">
-        <div className="w-full md:w-1/2 md:order-1">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-6 pt-12 md:pt-32 pb-12 md:pb-20">
+        <div className="w-full md:w-1/2 order-2 md:order-2">
           <HomeImage />
         </div>
-        <div className="w-full md:w-1/2 md:order-2">
+        <div className="w-full md:w-1/2 order-1 md:order-1">
           <HomeContent />
         </div>
       </div>
