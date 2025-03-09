@@ -1,6 +1,6 @@
 import React from "react";
 
-import { HomeSection } from "@/components/HeroSection";
+import { HomeSection } from "@/components/HomeSection";
 import { ImageGrid } from "@/components/FourImages";
 import HeroSection from "@/components/HeroSection2";
 

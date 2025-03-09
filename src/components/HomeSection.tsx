@@ -19,7 +19,7 @@ const SERVICES = [
   "And more... Whatever your landscaping heart desires!",
 ];
 
-const HeroImage = () => {
+const HomeImage = () => {
   return (
     <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
       <Image
@@ -34,12 +34,13 @@ const HeroImage = () => {
   );
 };
 
-const HeroContent = () => {
+const HomeContent = () => {
   return (
     <div className="px-2 space-y-4 md:space-y-6 max-w-xl">
       <div>
-        <h1 className="text-5xl md:text-5xl font-black text-gray-900 leading-tight">
-          Your Lawn,<br></br> <span className="text-teal-500">Our Passion</span>
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+          Your Lawn, <br />
+          <span className="text-teal-500">Our Passion</span>
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed">
           Whether you need a basic lawn trimming, detailed edging, or a complete
@@ -80,10 +81,10 @@ export const HomeSection = () => {
       {/* Added pt-24 to account for fixed navbar, and increased padding on larger screens */}
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-24 md:pt-32 pb-12 md:pb-20">
         <div className="w-full md:w-1/2 md:order-1">
-          <HeroImage />
+          <HomeImage />
         </div>
         <div className="w-full md:w-1/2 md:order-2">
-          <HeroContent />
+          <HomeContent />
         </div>
       </div>
     </section>

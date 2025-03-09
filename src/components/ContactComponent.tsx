@@ -40,7 +40,7 @@ const ContactContent = () => {
   return (
     <div className="px-2 space-y-4 md:space-y-6 max-w-xl">
       <div>
-        <h1 className="text-5xl md:text-5xl font-black text-gray-900 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
           Contact Us.
         </h1>
       </div>
