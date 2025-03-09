@@ -1,12 +1,12 @@
 import React from "react";
 
-import { About } from "@/components/AboutComponent";
+import { About2 } from "@/components/About2Component";
 import { ImageGrid } from "@/components/FourImages";
 
 const HomePage = () => {
   return (
     <div>
-      <About />
+      <About2 />
       <ImageGrid />
     </div>
   );

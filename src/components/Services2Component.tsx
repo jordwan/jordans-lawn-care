@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
-import homeImage from "../assets/big-house-lawn.png";
+import homeImage from "../assets/mowing-service.jpg";
 
 // Separate contact information for easy maintenance
 const CONTACT_INFO = {
@@ -21,7 +21,7 @@ const SERVICES = [
   "And more... Whatever your landscaping heart desires!",
 ];
 
-const ContactImage = () => {
+const Services2Image = () => {
   return (
     <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
       <Image
@@ -36,22 +36,20 @@ const ContactImage = () => {
   );
 };
 
-const ContactContent = () => {
+const Services2Content = () => {
   return (
     <div className="px-2 space-y-4 md:space-y-6 max-w-xl">
       <div>
         <h1 className="text-5xl md:text-5xl font-black text-gray-900 leading-tight">
-          Contact Us.
+          Our Services.
         </h1>
       </div>
 
       <div className="space-y-4">
         <h2 className="text-lg md:text-xl font-regular text-gray-900">
-          Jordan&apos;s Lawn Care operates in the Central Okanagan Region
-          servicing Kelowna, West Kelowna, McKinley Beach, Lake Country,
-          Peachland and everything in between. Let us handle the hard work, so
-          you can sit back, relax, and enjoy a vibrant outdoor space all season
-          long.
+          Our flexible approach is designed to meet the unique needs of both
+          homeowners and strata clients, ensuring every property remains
+          vibrant, healthy, and appealing.
         </h2>
         <ul className="space-y-2">
           {SERVICES.map((service, index) => (
@@ -89,20 +87,20 @@ const ContactContent = () => {
   );
 };
 
-export const Contact = () => {
+export const Services2 = () => {
   return (
     <section className="container mx-auto px-6">
       {/* Added pt-24 to account for fixed navbar, and increased padding on larger screens */}
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-24 md:pt-32 pb-12 md:pb-20">
         <div className="w-full md:w-1/2 md:order-1">
-          <ContactImage />
+          <Services2Image />
         </div>
         <div className="w-full md:w-1/2 md:order-2">
-          <ContactContent />
+          <Services2Content />
         </div>
       </div>
     </section>
   );
 };
 
-export default Contact;
+export default Services2;

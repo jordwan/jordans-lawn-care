@@ -1,12 +1,12 @@
 import React from "react";
 
-import { Services } from "@/components/ServicesComponent";
+import { Services2 } from "@/components/Services2Component";
 import { ImageGrid } from "@/components/FourImages";
 
 const HomePage = () => {
   return (
     <div>
-      <Services />
+      <Services2 />
       <ImageGrid />
     </div>
   );
