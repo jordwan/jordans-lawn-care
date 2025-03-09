@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Services2 } from "@/components/Services2Component";
+import { Services2 } from "@/components/ServicesComponent";
 import { ImageGrid } from "@/components/FourImages";
 
 const HomePage = () => {

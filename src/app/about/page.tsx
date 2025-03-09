@@ -1,6 +1,6 @@
 import React from "react";
 
-import { About2 } from "@/components/About2Component";
+import { About2 } from "@/components/AboutComponent";
 import { ImageGrid } from "@/components/FourImages";
 
 const HomePage = () => {
