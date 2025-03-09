@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import homeImage from "../assets/big-house-lawn.png";
+import homeImage from "../assets/heroimage.jpg";
 
 // Separate contact information for easy maintenance
 const CONTACT_INFO = {
