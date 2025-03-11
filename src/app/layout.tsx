@@ -47,7 +47,7 @@ export default function RootLayout({
       <body className={`${font.className} antialiased`}>
         <Navbar />
         {children}
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
         <Footer />
       </body>
     </html>
