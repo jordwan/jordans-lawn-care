@@ -3,6 +3,7 @@ import { Noto_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/FooterComponent";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const font = Noto_Sans({
   weight: ["100", "300", "400", "700", "900"],
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body className={`${font.className} antialiased`}>
         <Navbar />
         {children}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         <Footer />
       </body>
     </html>
