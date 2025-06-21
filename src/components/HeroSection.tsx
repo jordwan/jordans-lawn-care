@@ -79,7 +79,7 @@ export const HeroSection = () => {
   return (
     <section className="container mx-auto px-6">
       {/* Added pt-24 to account for fixed navbar, and increased padding on larger screens */}
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-24 md:pt-32 pb-12 md:pb-20">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-14 md:pt-32 pb-12 md:pb-20">
         <div className="w-full md:w-1/2 md:order-1">
           <HeroImage />
         </div>

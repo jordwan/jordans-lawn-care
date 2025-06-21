@@ -36,7 +36,7 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-green-600 transition-colors duration-200"
+                className="text-gray-700 hover:text-teal-600 transition-colors duration-200"
               >
                 {item.label}
               </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
           <button
             aria-label="Toggle navigation menu"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="md:hidden text-gray-700 hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 rounded"
+            className="md:hidden text-gray-700 hover:text-teal-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-600 rounded"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -78,7 +78,7 @@ const Navbar = () => {
           <button
             aria-label="Close menu"
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-gray-700 hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 rounded"
+            className="absolute top-4 right-4 text-gray-700 hover:text-teal-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-600 rounded"
           >
             <X size={28} />
           </button>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-gray-700 text-2xl hover:text-cyan-600 transition-colors duration-200"
+                className="block text-gray-700 text-2xl hover:text-teal-600 transition-colors duration-200"
               >
                 {item.label}
               </Link>

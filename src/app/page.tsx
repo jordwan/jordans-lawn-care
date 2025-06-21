@@ -7,9 +7,9 @@ import { HomeSection } from "@/components/HomeSection";
 const HomePage = () => {
   return (
     <div>
-      <HeroSection />
-      <ImageGrid />
       <HomeSection />
+      <ImageGrid />
+      <HeroSection />
     </div>
   );
 };
