@@ -1,5 +1,11 @@
 "use client";
-import React, { useState, useCallback, type KeyboardEvent } from "react";
+import React, {
+  useState,
+  useCallback,
+  useRef,
+  useEffect,
+  type KeyboardEvent,
+} from "react";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
@@ -22,16 +28,47 @@ interface ImageItem {
 
 // Separate data from component
 const GALLERY_ITEMS: ImageItem[] = [
-  { src: img1, title: "Lawn Trimming", link: "/contact" },
-  { src: img2, title: "Hedge Trimming", link: "/contact" },
-  { src: img3, title: "Garden Maintenance", link: "/contact" },
-  { src: img4, title: "Strata Lawn Maintenance", link: "/contact" },
-  { src: img5, title: "Aeration", link: "/contact" },
-  { src: img6, title: "Fertalizing", link: "/contact" },
+  {
+    src: img1,
+    title: "Lawn trimming",
+    alt: "Freshly cut front yard with precise edging",
+    link: "/contact?service=lawn-trimming",
+  },
+  {
+    src: img2,
+    title: "Hedge shaping",
+    alt: "Jordan's Lawn Care technician trimming a tall hedge",
+    link: "/contact?service=hedge-trimming",
+  },
+  {
+    src: img3,
+    title: "Garden maintenance",
+    alt: "Flower bed with fresh mulch and healthy plants",
+    link: "/contact?service=garden-maintenance",
+  },
+  {
+    src: img4,
+    title: "Strata lawn care",
+    alt: "Shared green space outside a strata complex",
+    link: "/contact?service=strata-lawn-care",
+  },
+  {
+    src: img5,
+    title: "Aeration",
+    alt: "Lawn aeration machine in use",
+    link: "/contact?service=aeration",
+  },
+  {
+    src: img6,
+    title: "Fertilizing",
+    alt: "Fertilizer being applied evenly across a lawn",
+    link: "/contact?service=fertilizing",
+  },
 ];
 
 export const ImageGrid = () => {
   const [selectedItem, setSelectedItem] = useState<ImageItem | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleImageClick = useCallback((item: ImageItem) => {
     setSelectedItem(item);
@@ -52,9 +89,10 @@ export const ImageGrid = () => {
   );
 
   // Prevent scroll when modal is open
-  React.useEffect(() => {
+  useEffect(() => {
     if (selectedItem) {
       document.body.style.overflow = "hidden";
+      closeButtonRef.current?.focus();
     } else {
       document.body.style.overflow = "unset";
     }
@@ -70,7 +108,7 @@ export const ImageGrid = () => {
           {GALLERY_ITEMS.map((item, index) => (
             <button
               key={item.title}
-              className="relative group overflow-hidden h-64 sm:h-64 md:h-48 lg:h-64 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-xl shadow-xl"
+              className="relative group overflow-hidden h-64 sm:h-64 md:h-48 lg:h-64 w-full focus:outline-none focus:ring-2 focus:ring-teal-500 rounded-xl shadow-xl"
               onClick={() => handleImageClick(item)}
               aria-label={`View ${item.title}`}
             >
@@ -79,14 +117,14 @@ export const ImageGrid = () => {
                 alt={item.alt || item.title}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                className="object-cover object-center transition-transform duration-300 group-hover:scale-105 "
+                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 priority={index < 4}
               />
               {/* Lighter overlay on mobile, darker on desktop hover */}
               <div className="absolute inset-0 bg-black opacity-20 sm:opacity-0 sm:group-hover:opacity-40 transition-opacity duration-300" />
               {/* Always visible title with enhanced text shadow for better readability */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-gray-100 text-3xl md:text-3xl font-bold opacity-100 transition-opacity duration-300 text-center px-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                <p className="text-gray-100 text-3xl md:text-3xl font-bold opacity-100 transition-opacity duration-300 text-center px-8 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
                   {item.title}
                 </p>
               </div>
@@ -100,6 +138,7 @@ export const ImageGrid = () => {
           className="fixed inset-0 bg-black/75 flex justify-center items-center p-4 z-50"
           onClick={handleClose}
           onKeyDown={handleKeyDown}
+          tabIndex={-1}
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"
@@ -118,17 +157,18 @@ export const ImageGrid = () => {
                 priority
               />
             </div>
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/40">
               <Link
                 href={selectedItem.link}
-                className="text-white text-5xl font-bold hover:text-cyan-500 focus:outline-none focus:ring-2 focus:ring-white rounded-lg px-4 py-2"
+                className="rounded-full bg-white px-6 py-3 text-lg font-semibold text-gray-900 shadow-lg transition hover:translate-y-0.5 hover:bg-teal-50 focus:outline-none focus:ring-2 focus:ring-teal-400"
                 id="modal-title"
               >
-                {selectedItem.title}
+                Request {selectedItem.title.toLowerCase()}
               </Link>
             </div>
             <button
-              className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/20 focus:outline-none focus:ring-2 focus:ring-white"
+              ref={closeButtonRef}
+              className="absolute top-4 right-4 p-2 rounded-full bg-black/20 text-white transition hover:bg-black/30 focus:outline-none focus:ring-2 focus:ring-white"
               onClick={handleClose}
               aria-label="Close modal"
             >

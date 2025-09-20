@@ -1,102 +1,84 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Phone, Mail } from "lucide-react";
+import { CalendarDays, Leaf, Sparkles } from "lucide-react";
 import homeImage from "../assets/mowing-service.jpg";
+import { ResponsiveImage } from "./shared/ResponsiveImage";
+import { ServicesList } from "./shared/ServicesList";
+import { DesktopContactCard } from "./shared/DesktopContactCard";
+import { MobileContactCard } from "./shared/MobileContactCard";
 
-// Separate contact information for easy maintenance
-const CONTACT_INFO = {
-  phone: "672-969-LAWN",
-  email: "info@jordanslawncare.ca",
-  companyName: "Jordan's Lawn Care",
-};
-
-// Separate services list for maintainability
-const SERVICES = [
-  "Lawn Mowing & Hedge Maintenance",
-  "Garden Bed Cleanup & Edging",
-  "Power Raking & Aeration",
-  "Residential and Strata Services",
-  "And more... Whatever your landscaping heart desires!",
+const SERVICE_PACKAGES = [
+  {
+    icon: Leaf,
+    title: "Weekly mow & trim",
+    description: "Reliable 7-day rotations keep turf healthy and walkways spotless.",
+  },
+  {
+    icon: Sparkles,
+    title: "Seasonal cleanups",
+    description: "Spring power raking, fall leaf removal, and garden bed refreshes.",
+  },
+  {
+    icon: CalendarDays,
+    title: "Strata programs",
+    description: "Custom care plans with detailed reporting for property managers.",
+  },
 ];
 
-const Services2Image = () => {
+const Services2Content = () => {
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
-      <Image
-        src={homeImage}
-        alt="Professional lawn care services in Kelowna"
-        fill
-        className="object-cover transition-transform duration-300 hover:scale-105"
-        priority
-        sizes="(max-width: 768px) 100vw, 50vw"
-      />
+    <div className="space-y-5 md:space-y-8 max-w-xl">
+      <div className="space-y-3">
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+          Our services
+        </h1>
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          Flexible, year-round lawn care that scales from cozy backyards to multi-building strata communities.
+        </p>
+      </div>
+
+      <ServicesList className="space-y-3" />
+
+      <DesktopContactCard className="mt-6" />
     </div>
   );
 };
 
-const Services2Content = () => {
+const PackagesGrid = ({ className = "" }: { className?: string }) => {
   return (
-    <div className="px-2 space-y-4 md:space-y-6 max-w-xl">
-      <div>
-        <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-          Our Services.
-        </h1>
-      </div>
-
-      <div className="space-y-4">
-        <h2 className="text-lg md:text-xl font-regular text-gray-900">
-          Our flexible approach is designed to meet the unique needs of both
-          homeowners and strata clients, ensuring every property remains
-          vibrant, healthy, and appealing.
-        </h2>
-        <ul className="space-y-2">
-          {SERVICES.map((service, index) => (
-            <li
-              key={index}
-              className="flex items-start space-x-2 text-lg text-gray-700"
-            >
-              <span className="text-teal-500 font-bold mt-1">•</span>
-              <span className="text-xl text-gray-600 font-bold mt-1">
-                {service}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="pt-2 space-y-4">
-        <div className="space-y-3">
-          <Link
-            href={`tel:${CONTACT_INFO.phone}`}
-            className="flex items-center space-x-2 text-xl md:text-2xl font-bold text-teal-500 hover:text-teal-600 transition-colors"
-          >
-            <Phone className="w-6 h-6" />
-            <span>{CONTACT_INFO.phone}</span>
-          </Link>
-          <Link
-            href={`mailto:${CONTACT_INFO.email}?subject=Lawn Care Inquiry`}
-            className="flex items-center space-x-2 text-lg md:text-xl font-bold text-teal-500 hover:text-teal-600 transition-colors"
-          >
-            <Mail className="w-6 h-6" />
-            <span>{CONTACT_INFO.email}</span>
-          </Link>
+    <div
+      className={`grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ${className}`}
+    >
+      {SERVICE_PACKAGES.map(({ icon: Icon, title, description }) => (
+        <div
+          key={title}
+          className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm"
+        >
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-teal-600">
+            <Icon className="h-5 w-5" aria-hidden />
+          </div>
+          <h3 className="mt-3 text-base font-semibold text-gray-900">{title}</h3>
+          <p className="mt-2 text-sm text-gray-600">{description}</p>
         </div>
-      </div>
+      ))}
     </div>
   );
 };
 
 export const Services2 = () => {
   return (
-    <section className="container mx-auto px-6">
-      {/* Added pt-24 to account for fixed navbar, and increased padding on larger screens */}
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-24 md:pt-32 pb-12 md:pb-20">
-        <div className="w-full md:w-1/2 md:order-1">
-          <Services2Image />
+    <section className="container mx-auto px-4 sm:px-6">
+      <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 pt-24 md:pt-32 pb-12 md:pb-20">
+        <div className="w-full md:w-1/2 md:order-1 flex flex-col gap-5">
+          <ResponsiveImage
+            src={homeImage}
+            alt="Jordan's Lawn Care team mowing a residential property"
+            overlay
+          />
+          <PackagesGrid className="hidden md:grid" />
         </div>
-        <div className="w-full md:w-1/2 md:order-2">
+        <div className="w-full md:w-1/2 md:order-2 mt-8 md:mt-0 space-y-5 md:space-y-6">
           <Services2Content />
+          <PackagesGrid className="grid md:hidden" />
+          <MobileContactCard />
         </div>
       </div>
     </section>

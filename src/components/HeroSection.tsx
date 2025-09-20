@@ -1,72 +1,67 @@
-"use client";
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Check } from "lucide-react";
+import { CONTACT_INFO, SERVICES } from "../constants/contact";
 import heroImage from "../assets/heroimage.jpg";
-
-// Separate contact information for easy maintenance
-const CONTACT_INFO = {
-  phone: "672-969-5296",
-  email: "info@jordanslawncare.ca",
-  companyName: "Jordan's Lawn Care",
-};
-
-// Separate services list for maintainability
-const SERVICES = [
-  "Lawn Mowing & Hedge Maintenance",
-  "Garden Bed Cleanup & Edging",
-  "Power Raking & Aeration",
-  "Residential and Strata Services",
-  "And more... Whatever your landscaping heart desires!",
-];
 
 const HeroImage = () => {
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
+    <div className="relative w-full h-[260px] sm:h-[320px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
       <Image
         src={heroImage}
-        alt="Professional lawn care services in Kelowna"
+        alt="Jordan's Lawn Care team maintaining a lush Kelowna lawn"
         fill
-        className="object-cover transition-transform duration-300 hover:scale-105"
+        className="object-cover transition-transform duration-500 hover:scale-105"
         priority
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(max-width: 768px) 100vw, 45vw"
+        placeholder="blur"
       />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent" aria-hidden />
     </div>
   );
 };
 
 const HeroContent = () => {
   return (
-    <div className="px-2 space-y-4 md:space-y-6 max-w-xl">
-      <div>
+    <div className="space-y-6 md:space-y-8">
+      <div className="space-y-4">
         <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-          Your Lawn, <br />
-          <span className="text-teal-500">Our Passion</span>
+          Your lawn,
+          <br />
+          <span className="text-teal-600">our passion.</span>
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed">
-          Whether you need a basic lawn trimming, detailed edging, or a complete
-          yard makeover,{" "}
-          <span className="text-teal-500 font-bold">
-            {CONTACT_INFO.companyName}
-          </span>{" "}
-          is your go-to choice in Kelowna and the Central Okanagan.
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          Weekly maintenance, seasonal cleanups, and strata care programs backed by clear communication and zero surprises.
         </p>
       </div>
 
-      <div className="space-y-4">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900">
-          We provide top-quality, friendly service at competitive rates,
-          offering:
+      <div className="flex flex-wrap gap-3">
+        <Link
+          href="/services"
+          className="inline-flex items-center gap-2 rounded-full bg-teal-500 px-5 py-2 text-sm font-semibold text-white transition hover:bg-teal-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+        >
+          Explore services
+          <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
+        <Link
+          href={`tel:${CONTACT_INFO.phone}`}
+          className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-5 py-2 text-sm font-semibold text-white transition hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+        >
+          Call {CONTACT_INFO.phone}
+        </Link>
+      </div>
+
+      <div className="rounded-2xl bg-white/90 p-5 shadow-sm ring-1 ring-gray-100">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+          What we do
         </h2>
-        <ul className="space-y-2">
-          {SERVICES.map((service, index) => (
-            <li
-              key={index}
-              className="flex items-start space-x-2 text-lg text-gray-700"
-            >
-              <span className="text-teal-500 font-bold mt-1">•</span>
-              <span className="text-xl text-gray-600 font-bold mt-1">
-                {service}
+        <ul className="mt-3 grid gap-2">
+          {SERVICES.map((service) => (
+            <li key={service} className="flex items-center gap-3 text-sm text-gray-700">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-teal-100 text-teal-600">
+                <Check className="h-4 w-4" aria-hidden />
               </span>
+              <span>{service}</span>
             </li>
           ))}
         </ul>
@@ -77,13 +72,12 @@ const HeroContent = () => {
 
 export const HeroSection = () => {
   return (
-    <section className="container mx-auto px-6">
-      {/* Added pt-24 to account for fixed navbar, and increased padding on larger screens */}
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 pt-14 md:pt-32 pb-12 md:pb-20">
-        <div className="w-full md:w-1/2 md:order-1">
+    <section className="container mx-auto px-4 sm:px-6">
+      <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 pt-24 md:pt-32 pb-12 md:pb-20">
+        <div className="w-full md:w-1/2 md:order-2 flex flex-col gap-5">
           <HeroImage />
         </div>
-        <div className="w-full md:w-1/2 md:order-2">
+        <div className="w-full md:w-1/2 md:order-1 mt-8 md:mt-0">
           <HeroContent />
         </div>
       </div>
