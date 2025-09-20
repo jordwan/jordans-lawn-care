@@ -11,9 +11,55 @@ const font = Noto_Sans({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://jordanslawncare.ca";
+
 export const metadata: Metadata = {
-  title: "Jordan's Lawn Care",
-  description: "Kelowna's BEST Lawn Care Provider. Servicing Central Okanagan.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Jordan's Lawn Care | Kelowna Lawn Care Specialists",
+    template: "%s | Jordan's Lawn Care",
+  },
+  description:
+    "Jordan's Lawn Care delivers dependable lawn maintenance, landscaping, and strata services across Kelowna and the Central Okanagan.",
+  keywords: [
+    "Kelowna lawn care",
+    "Kelowna landscaping",
+    "Okanagan lawn maintenance",
+    "strata lawn services",
+    "Jordan's Lawn Care",
+  ],
+  authors: [{ name: "Jordan's Lawn Care" }],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Jordan's Lawn Care | Kelowna Lawn Care Specialists",
+    description:
+      "Jordan's Lawn Care keeps homes and strata properties lush with eco-friendly maintenance throughout Kelowna and the Central Okanagan.",
+    url: siteUrl,
+    siteName: "Jordan's Lawn Care",
+    locale: "en_CA",
+    type: "website",
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Freshly manicured Kelowna property maintained by Jordan's Lawn Care",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jordan's Lawn Care | Kelowna Lawn Care Specialists",
+    description:
+      "Trusted lawn care team for Kelowna homeowners and strata communities. Weekly maintenance, seasonal cleanups, and more.",
+    images: ["/og-default.jpg"],
+  },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
